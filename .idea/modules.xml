@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DBManageDigger.iml" filepath="$PROJECT_DIR$/DBManageDigger.iml" />
       <module fileurl="file://$PROJECT_DIR$/db-core/db-core.iml" filepath="$PROJECT_DIR$/db-core/db-core.iml" />
-      <module fileurl="file://$PROJECT_DIR$/db-demo/db-demo.iml" filepath="$PROJECT_DIR$/db-demo/db-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/db-mytis-druid/db-mytis-druid.iml" filepath="$PROJECT_DIR$/db-mytis-druid/db-mytis-druid.iml" />
     </modules>
   </component>
 </project>

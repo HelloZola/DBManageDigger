@@ -7,7 +7,7 @@
   <name>DBManageDigger</name>
   <modules>
 	  <module>db-core</module>
-	  <module>db-demo</module>
+	  <module>db-mytis-druid</module>
   </modules>
 
 </project>
