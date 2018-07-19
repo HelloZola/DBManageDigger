@@ -4,6 +4,10 @@ import com.vi.utils.JDBCUtil;
 import org.junit.Test;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class JunitTestUser {
 
@@ -85,9 +89,16 @@ public class JunitTestUser {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         conn = JDBCUtil.getConnection();
+        System.out.println("hashcode:"+conn.getClass().hashCode());
+        try {
+            System.out.println(conn.getAutoCommit());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         try {
             conn.setAutoCommit(false);
-            stmt = conn.prepareStatement("insert into person(name,age)values('zhang','11')");
+//            stmt = conn.prepareStatement("insert into person(name,age)values('zhang','11')");
+            stmt = conn.prepareStatement("update person set name='chenxia' where age='12'");
             //准备sql操作语句
             int i = stmt.executeUpdate();
             conn.commit();
@@ -97,6 +108,23 @@ public class JunitTestUser {
         } finally {
             JDBCUtil.close(conn, stmt, rs);
         }
+    }
+
+    @Test
+    public void test5(){
+        for(int i=0;i<10;i++){
+            new Thread(new Runnable() {
+                public void run() {
+                    System.out.println("begin...");
+                    test4();
+                    System.out.println("end...");
+                }
+            }).start();
+        }
+    }
+
+    public static void main(String[] args) {
+        new JunitTestUser().test5();
     }
 
 }

@@ -9,4 +9,8 @@
     <select id="getUserList2" resultType="User">
         select name,age from person
     </select>
+
+    <insert id="insertPerson" parameterType="Person">
+        insert into person(name,age) values(#{name}, #{age})
+    </insert>
 </mapper>

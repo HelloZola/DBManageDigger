@@ -1,8 +1,8 @@
 package com.vi.test;
 
 import com.alibaba.fastjson.JSONObject;
-import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import com.vi.dao.UserDao;
+import com.vi.vo.Person;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Before;
@@ -33,4 +33,23 @@ public class JunitTestUser {
         System.out.println(JSONObject.toJSONString(userDao.getUserList2()));
         System.out.println("*********************************************");
     }
+
+    @Test
+    public void test3() {
+        System.out.println("*********************************************");
+        Person person = new Person();
+        person.setName("chen2319");
+        person.setAge("10");
+        userDao.insertPerson(person);
+
+        Person person2 = new Person();
+        person2.setName("chen2320");
+        person2.setAge("10");
+        userDao.insertPerson(person2);
+
+        System.out.println("*********************************************");
+    }
+
+
+
 }
