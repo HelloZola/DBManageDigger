@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/db-mytis-druid/pom.xml" />
+        <option value="$PROJECT_DIR$/db-base-jdbc/pom.xml" />
       </list>
     </option>
   </component>
