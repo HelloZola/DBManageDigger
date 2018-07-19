@@ -58,4 +58,45 @@ public class JunitTestUser {
         }
     }
 
+    @Test
+    public void test3() {
+        Connection conn = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        conn = JDBCUtil.getConnection();
+        try {
+            conn.setAutoCommit(false);
+            stmt = conn.createStatement();
+            //准备sql操作语句
+            String sql = "insert into person(name,age)values('wang','432')";
+            int i = stmt.executeUpdate(sql);
+            System.out.println("count:"+i);
+            conn.commit();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCUtil.close(conn, stmt, rs);
+        }
+    }
+
+    @Test
+    public void test4() {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        conn = JDBCUtil.getConnection();
+        try {
+            conn.setAutoCommit(false);
+            stmt = conn.prepareStatement("insert into person(name,age)values('zhang','11')");
+            //准备sql操作语句
+            int i = stmt.executeUpdate();
+            conn.commit();
+            System.out.println("count:"+i);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCUtil.close(conn, stmt, rs);
+        }
+    }
+
 }
