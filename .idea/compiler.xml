@@ -11,9 +11,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="db-core" target="1.6" />
-      <module name="db-demo" target="1.6" />
-      <module name="DBManageDigger" target="1.6" />
+      <module name="db-core" target="1.5" />
+      <module name="db-demo" target="1.7" />
+      <module name="DBManageDigger" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
