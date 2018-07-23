@@ -9,6 +9,7 @@
 	  <module>db-core</module>
       <module>db-base-jdbc</module>
 	  <module>db-mytis-druid</module>
+	  <module>db-demo</module>
   </modules>
 
 </project>
