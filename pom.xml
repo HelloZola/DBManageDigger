@@ -8,12 +8,7 @@
   <modules>
 	  <module>db-core</module>
       <module>db-base-jdbc</module>
-<<<<<<< HEAD
 	  <module>db-mybatis-druid</module>
-=======
-	  <module>db-mytis-druid</module>
 	  <module>db-demo</module>
->>>>>>> df68868dfa9e7b9723a57adfaac2657e0e35ff1d
   </modules>
-
 </project>
