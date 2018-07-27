@@ -8,13 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="db-base-jdbc" />
         <module name="db-core" />
+        <module name="db-demo" />
         <module name="db-mytis-druid" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="db-base-jdbc" target="1.5" />
       <module name="db-core" target="1.5" />
-      <module name="db-demo" target="1.7" />
+      <module name="db-demo" target="1.8" />
       <module name="db-mytis-druid" target="1.8" />
       <module name="DBManageDigger" target="1.5" />
     </bytecodeTargetLevel>
